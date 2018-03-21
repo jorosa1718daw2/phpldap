@@ -32,7 +32,7 @@ if (isset($_SESSION['username']))
 	}
 }
 else{
-	echo "Hola tonto";
+	echo "Hola";
 	header('Location: login.php'); 	
 }
 
@@ -47,6 +47,9 @@ if(isset($_GET['logout']))	{
 if(isset($_POST['cercaUsuari'])){
 	header('Location: cercaUsuari.php'); 
 }
+if(isset($_POST['afegirUsuari'])){
+	header('Location: addUser.php'); 
+}
 ?>
 <html>
 <title> Dades de l'usuari</title>
@@ -54,6 +57,7 @@ if(isset($_POST['cercaUsuari'])){
 
 	<form action="home.php" method="post">
 		<input type="radio" name="cercaUsuari" value=""/>Cerca Usuari <br>
+		<input type="radio" name="afegirUsuari" value=""/>AfegirUsuari <br>
 		<input type="submit" value="Anar a la opció escollida"/>
 	</form>
 	
