@@ -52,13 +52,64 @@ if(isset($_POST['afegirUsuari'])){
 }
 ?>
 <html>
+<head>
 <title> Dades de l'usuari</title>
-	<a href="home.php?logout">Logout</a> <br> <br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
 
-	<form action="home.php" method="post">
-		<input type="radio" name="cercaUsuari" value=""/>Cerca Usuari <br>
-		<input type="radio" name="afegirUsuari" value=""/>AfegirUsuari <br>
-		<input type="submit" value="Anar a la opció escollida"/>
-	</form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">PHPLDAP-ADMIN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        
+      </li>
+    </ul>
+   <form class="form-inline my-2 my-lg-0">
+   <a type="button" class="btn btn-danger" class="btn btn-secondary my-2 my-sm-0"  href="home.php?logout">Logout</a>
+      
+    </form>
+  </div>
+</nav>
+
+<div class="mx-auto" style="width: 300px;">
+<form class="px-4 py-3" action="home.php" method="post">
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="cercaUsuari" value=""/>
+		<label class="form-check-label" for="exampleRadios1">
+		Cerca Usuari
+		</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="afegirUsuari" value=""/>
+		<label class="form-check-label" for="exampleRadios2">
+		AfegirUsuari
+		</label> 
+	</div>
+	<br>
+	<input class="btn btn-primary" type=submit value="Anar a la opció escollida"/>
+</form>
+
+</div>
+
+
+
+
+
+
+</body>
+	
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	
 </html>

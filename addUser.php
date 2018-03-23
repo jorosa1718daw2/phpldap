@@ -1,3 +1,81 @@
+
+<html>
+  <head>
+    <title>m08uf3pr2 - Acc&eacute;s al servei de directori LDAP amb PHP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">PHPLDAP-ADMIN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        
+      </li>
+    </ul>
+   <form class="form-inline my-2 my-lg-0">
+   <a type="button" class="btn btn-danger" class="btn btn-secondary my-2 my-sm-0"  href="home.php?logout">Logout</a>
+      
+    </form>
+  </div>
+</nav>
+<div class="container" style="margin-top: 5%">
+    <h1>Afegir Usuari</h1>
+
+    <form action="addUser.php" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label >givenname</label>
+        <input type="text" class="form-control" name="givenname" placeholder="givenname">
+        </div>
+        
+    <div class="form-group col-md-6">
+      <label >Last Name</label>
+      <input type="text" class="form-control" name="surname" placeholder="surname">
+    </div>
+
+    <div class="form-group">
+        <label >Title</label>
+        <input type="text" class="form-control" name="title" placeholder="title">
+    </div>
+
+     <div class="form-group col-md-6">
+      <label >telephone number </label>
+      <input type="text" class="form-control" name="telephone" placeholder="telephone">
+    </div>
+
+     <div class="form-group">
+        <label >Mobile Phone</label>
+        <input type="text" class="form-control" name="mobile" placeholder="mobile">
+    </div>
+
+
+
+
+
+  </div>
+        
+       
+  
+        <input type="submit" name="submit" value="Afegir"> <br>
+
+       
+
+    </form>
+</div>
+   
+  </body>
+</html>
+
 <?php
 session_start();
 if (isset($_SESSION['username']))
@@ -55,49 +133,3 @@ if($ldapconn)
 
 
 ?>
-<html>
-  <head>
-    <title>m08uf3pr2 - Acc&eacute;s al servei de directori LDAP amb PHP</title>
-  </head>
-  <body>
-    <h1>Afegir Usuari</h1>
-
-    <form action="addUser.php" method="post">
-        
-        <label for="">uid:</label><br>
-        <input type="text" name="uid"/> <br> <br>
-        <label for="">OU:</label><br>
-        <input type="text" name="ou"/> <br> <br>
-        <label for="">givenName:</label><br>
-        <input type="text" name="givenname"/> <br> <br>
-        <label for="">surname:</label><br>
-        <input type="text" name="surname"/> <br> <br>
-        <label for="">title:</label><br>
-        <input type="text" name="title"/> <br> <br>
-         <label for="">telephone:</label><br>
-        <input type="text" name="telephone"/> <br> <br>
-        <label for="">mobile:</label><br>
-        <input type="text" name="mobile"/> <br> <br>
-        <label for="">postalAddress:</label><br>
-        <input type="text" name="postaladdress"/> <br> <br>
-        <label for="">shell:</label><br>
-        <input type="text" name="shell"/> <br> <br>
-        <label for="">gidnumber:</label><br>
-        <input type="text" name="gidnumber"/> <br> <br>
-        <label for="">uidnumer:</label><br>
-        <input type="text" name="uidnumber"/> <br> <br>
-        <label for="">homedirectory:</label><br>
-        <input type="text" name="homedirectory"/> <br> <br>
-        <label for="">description:</label><br>
-        <input type="text" name="description"/> <br> <br>
-        <label for="">Password:</label><br>
-        <input type="text" name="password"/> <br> <br>
-  
-        <input type="submit" name="submit" value="Afegir"> <br>
-
-        <a href="home.php">Volver</a>
-
-    </form>
-   
-  </body>
-</html>
