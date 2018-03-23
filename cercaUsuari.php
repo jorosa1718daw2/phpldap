@@ -100,7 +100,7 @@ if (isset($_POST['username']))
 			} 
 		}else {
 			echo '<div class="alert alert-danger" style="text-align: center;">';
-			echo "No s'ha trobat res";
+			echo "No s'ha trobat";
 			echo '</div>';
 		}
 	

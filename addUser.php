@@ -58,6 +58,45 @@
         <input type="text" class="form-control" name="mobile" placeholder="mobile">
     </div>
 
+     <div class="form-group col-md-6">
+      <label >Postal Address </label>
+      <input type="text" class="form-control" name="postaladdress" placeholder="postaladdress">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label >Description</label>
+      <input type="text" class="form-control" name="description" placeholder="description">
+    </div>
+    <div class="form-group">
+        <label >UID</label>
+        <input type="text" class="form-control" name="uid" placeholder="uid">
+    </div>
+    <div class="form-group col-md-6">
+        <label >Organizational Unit</label>
+        <input type="text" class="form-control" name="ou" placeholder="ou">
+    </div>
+    <div class="form-group">
+        <label >GUID</label>
+        <input type="text" class="form-control" name="gidnumber" placeholder="gidnumber">
+    </div>
+    <div class="form-group">
+        <label >UID Number</label>
+        <input type="text" class="form-control" name="uidnumber" placeholder="uidnumber">
+    </div>
+
+    <div class="form-group col-md-6">
+        <label >Home Directory</label>
+        <input type="text" class="form-control" name="homedirectory" placeholder="homedirectory">
+    </div>
+    <div class="form-group col-md-6">
+        <label >Shell</label>
+        <input type="text" class="form-control" name="shell" placeholder="shell">
+    </div>
+    <div class="form-group">
+        <label >Password</label>
+        <input type="password" class="form-control" name="password" placeholder="password">
+    </div>
+
 
 
 
@@ -66,7 +105,7 @@
         
        
   
-        <input type="submit" name="submit" value="Afegir"> <br>
+        <input class="btn btn-success" type="submit" name="submit" value="Afegir"> <br>
 
        
 
