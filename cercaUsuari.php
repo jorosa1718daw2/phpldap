@@ -30,6 +30,7 @@
   </div>
 </nav>
 
+<h1 style="text-align: center">Cercar Usuari</h1> 
 
 <div class="container" style="margin-top: 5%">
   <div class="row">
@@ -84,7 +85,7 @@ if (isset($_POST['username']))
 			if ($_POST['username']){
 			for ($i=0; $i<$info["count"]; $i++)
 			{
-				echo '<div class="col-sm">';
+				echo '<div class="col-sm alert alert-success">';
 				echo "Nom: ".$info[$i]["cn"][0]. "<br />";
 				echo "Títol: ".$info[$i]["title"][0]. "<br />";
 				echo "Telèfon fixe: ".$info[$i]["telephonenumber"][0]. "<br />";
@@ -99,7 +100,7 @@ if (isset($_POST['username']))
 					echo '</div>';
 			} 
 		}else {
-			echo '<div class="alert alert-danger" style="text-align: center;">';
+			echo '<div class="col-sm alert alert-danger" style="text-align: center;">';
 			echo "No s'ha trobat";
 			echo '</div>';
 		}
@@ -108,6 +109,7 @@ if (isset($_POST['username']))
 		} 
 		else {
 			echo "Error d'autenticació!";
+			header('Location: login.php');
 		}
 	}
 }

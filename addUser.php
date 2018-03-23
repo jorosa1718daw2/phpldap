@@ -8,7 +8,7 @@
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">PHPLDAP-ADMIN</a>
+  <a class="navbar-brand" href="home.php">PHPLDAP-ADMIN</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -113,6 +113,11 @@
 </div>
    
   </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
 </html>
 
 <?php
@@ -157,12 +162,22 @@ if($ldapconn)
 
 
         $ldapdn  = 'uid='.trim($_POST['uid']).',ou='.trim($_POST['ou']).',dc=fjeclot,dc=net';
-        $add = ldap_add($ldapconn,$ldapdn,$info) or die ("juyut");
+        $add = ldap_add($ldapconn,$ldapdn,$info);
+        if($add) {
+            echo '<div class="container alert alert-succes" style="text-align: center;">';
+            echo "Usuari afegit";
+            echo '</div>';
+        }else{
+            echo '<div class="container alert alert-danger" style="text-align: center;">';
+            echo "Usuari no afegit";
+            echo '</div>';
+        }
         
         
         
     }else {
         echo "No se pudo conectar al servidor LDAP";
+        header('Location: login.php');
     }
 
     }

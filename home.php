@@ -50,11 +50,15 @@ if(isset($_POST['cercaUsuari'])){
 if(isset($_POST['afegirUsuari'])){
 	header('Location: addUser.php'); 
 }
+if(isset($_POST['deleteUser'])){
+	header('Location: deleteUser.php'); 
+}
 ?>
 <html>
 <head>
 <title> Dades de l'usuari</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -91,7 +95,13 @@ if(isset($_POST['afegirUsuari'])){
 	<div class="form-check">
 		<input class="form-check-input" type="radio" name="afegirUsuari" value=""/>
 		<label class="form-check-label" for="exampleRadios2">
-		AfegirUsuari
+		Afegir Usuari
+		</label> 
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" name="deleteUser" value=""/>
+		<label class="form-check-label" for="exampleRadios2">
+		Eliminar Usuari
 		</label> 
 	</div>
 	<br>
